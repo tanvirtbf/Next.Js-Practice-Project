@@ -1,22 +1,28 @@
-import Link from 'next/link'
-import './about.css'
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import "./about.css";
 export default function Layout({ children }) {
+  const pathName = usePathname();
+  console.log(pathName);
   return (
     <>
-      <ul className="main">
-        <li>
-          <Link href={'/'}>Home</Link>
-        </li>
-        <li>
-          <Link href={'/login'}>Login</Link>
-        </li>
-        <li>
-          <Link href={'/about/aboutcollege'}>About College</Link>
-        </li>
-        <li>
-          <Link href={'/about/aboutstudent'}>About Student</Link>
-        </li>
-      </ul>
+      {pathName !== "/about/aboutstudent" ? (
+        <ul className="main">
+          <li>
+            <Link href={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link href={"/about"}>About</Link>
+          </li>
+          <li>
+            <Link href={"/about/aboutcollege"}>About College</Link>
+          </li>
+          <li>
+            <Link href={"/about/aboutstudent"}>About Student</Link>
+          </li>
+        </ul>
+      ) : null}
       {children}
     </>
   );
