@@ -1,21 +1,44 @@
-async function productlist() {
+import Product from "@/app/productlist/Product";
+
+async function getData() {
   let data = await fetch("https://dummyjson.com/products");
-  data = await data.json();
-  return data.products;
+  let res = await data.json();
+  return res.products;
 }
 
 export default async function Page() {
-  const getData = await productlist();
-  console.log(getData);
+  const data = await getData();
   return (
     <div>
       <h1>Product List</h1>
-      {getData.map((item, i) => (
-        <h3 key={i}>{item.title}</h3>
-      ))}
+      {data.map((item, i) => {
+        <div>
+          <h3 key={i}>{item.title}</h3>
+          <Product />
+        </div>;
+      })}
     </div>
   );
 }
+
+// async function productlist() {
+//   let data = await fetch("https://dummyjson.com/products");
+//   data = await data.json();
+//   return data.products;
+// }
+
+// export default async function Page() {
+//   const getData = await productlist();
+//   console.log(getData);
+//   return (
+//     <div>
+//       <h1>Product List</h1>
+//       {getData.map((item, i) => (
+//         <h3 key={i}>{item.title}</h3>
+//       ))}
+//     </div>
+//   );
+// }
 
 // "use client";
 // import { useEffect, useState } from "react";
