@@ -15,6 +15,7 @@ export default function Home() {
       <Link href={"/about"}>Go to About Page</Link>
       <button onClick={()=> navigate('login')}>Go to Login page</button>
       <button onClick={()=> navigate('about')}>Go to About Page</button>
+      <button onClick={()=> navigate('/productlist')}>Product List</button>
     </main>
   );
 }
