@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Link from 'next/link'
@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h1>Home Page</h1>
-      <Link href={"/login"}>Go to Login Page</Link>
-      <Link href={"/about"}>Go to About Page</Link>
-      <button onClick={()=> navigate('login')}>Go to Login page</button>
-      <button onClick={()=> navigate('about')}>Go to About Page</button>
+      <Link href={"/login"}>Login Page</Link>
+      <Link href={"/about"}>About Page</Link>
+      <button onClick={()=> router.push('/login')}>Login Page</button>
+      <button onClick={()=> navigate('/about')}>About Page</button>
       <button onClick={()=> navigate('/productlist')}>Product List</button>
     </main>
   );
