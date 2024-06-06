@@ -1,14 +1,13 @@
-"use client"
+"use client";
 import Link from "next/link";
-import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter()
+  const router = useRouter();
 
-  const routing = (route)=>{
-    router.push(route)
-  }
+  const routing = (route) => {
+    router.push(route);
+  };
 
   return (
     <main>
@@ -18,12 +17,13 @@ export default function Home() {
       <Link href={"/about"}>About Page</Link>
       <br />
       <br />
-      <button onClick={()=> routing("/login")}>Login</button>
+      <button onClick={() => routing("/login")}>Login</button>
       <br />
       <br />
-      <button onClick={()=> routing("/about")}>About</button>
-      <br /><br />
-      <button onClick={()=> router.push("/studentlist")}>Student List</button>
+      <button onClick={() => routing("/about")}>About</button>
+      <br />
+      <br />
+      <button onClick={() => router.push("/studentlist")}>Student List</button>
     </main>
   );
 }
