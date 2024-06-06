@@ -22,6 +22,8 @@ export default function Home() {
       <br />
       <br />
       <button onClick={()=> routing("/about")}>About</button>
+      <br /><br />
+      <button onClick={()=> router.push("/studentlist")}>Student List</button>
     </main>
   );
 }
