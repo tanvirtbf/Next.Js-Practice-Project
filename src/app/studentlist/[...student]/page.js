@@ -2,7 +2,7 @@
 import { useParams, usePathname } from 'next/navigation'
 import React from 'react'
 
-const Student = () => {
+const Student = ({params}) => {
   const {student} = useParams()
   const pathName = usePathname()
   return (
