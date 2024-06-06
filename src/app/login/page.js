@@ -1,9 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Login = () => {
   return (
     <div>
-      Login
+      <h1>Login Page</h1>
+      <Link href={"/"}>Go to Home Page</Link>
     </div>
   )
 }
