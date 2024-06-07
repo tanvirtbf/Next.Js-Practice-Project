@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
 
 const StudentList = () => {
   return (
@@ -25,7 +24,7 @@ const StudentList = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default StudentList
+export default StudentList;
