@@ -3,6 +3,9 @@ import React from 'react'
 
 const Dashboard = () => {
   const router = useRouter()
+  const navigate = (route)=>{
+    
+  }
   return (
     <div>
       Hello Dashboard!
