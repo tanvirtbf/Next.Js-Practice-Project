@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
-import "./styles.css"
+import "./styles.css";
 
 const Dashboard = () => {
   const router = useRouter();
