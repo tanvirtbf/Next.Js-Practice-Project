@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <div>
       Hello Dashboard!
-      <button>Home</button>
+      <button onClick={()=> navigate("/")}>Home</button>
     </div>
   )
 }
