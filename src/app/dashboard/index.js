@@ -4,7 +4,7 @@ import React from 'react'
 const Dashboard = () => {
   const router = useRouter()
   const navigate = (route)=>{
-    
+    router.push(route)
   }
   return (
     <div>
