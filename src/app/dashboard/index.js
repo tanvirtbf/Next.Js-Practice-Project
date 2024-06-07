@@ -1,17 +1,16 @@
-import { useRouter } from 'next/navigation'
-import React from 'react'
+import { useRouter } from "next/navigation";
 
 const Dashboard = () => {
-  const router = useRouter()
-  const navigate = (route)=>{
-    router.push(route)
-  }
+  const router = useRouter();
+  const navigate = (route) => {
+    router.push(route);
+  };
   return (
     <div>
       Hello Dashboard!
-      <button onClick={()=> navigate("/")}>Home</button>
+      <button onClick={() => navigate("/")}>Home</button>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
