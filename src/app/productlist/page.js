@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button';
 
 const getData = async () => {
   let data = await fetch("https://dummyjson.com/products");
@@ -12,7 +13,14 @@ const ProductList = async () => {
     <div>
       <h1>Call Api with Server Component</h1>
       {
-        data.map((item,i)=> <h3 key={i}>{item.title}</h3>)
+        data.map((item,i)=> {
+          return (
+            <>
+              <h3 key={i}>{item.title}</h3>
+              <Button />
+            </>
+          )
+        })
       }
     </div>
   )
