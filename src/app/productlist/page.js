@@ -28,3 +28,11 @@ const ProductList = async () => {
 
 export default ProductList
 
+export function generateMetadata({params}){
+  return (
+    {
+      title: "hello",
+      description: "Hello World!"
+    }
+  )
+}
