@@ -17,7 +17,7 @@ const ProductList = async () => {
           return (
             <>
               <h3 key={i}>{item.title}</h3>
-              <Button />
+              <Button price = {item.price} />
             </>
           )
         })
