@@ -4,12 +4,13 @@ import React from 'react'
 
 const StudentLogin = () => {
   const {student} = useParams();
-  const pathName = usePathname()
+  console.log(student)
   console.log(student)
   return (
     <div>
-      <h1>{student} <br /> {pathName}</h1>
-      Student Login Page
+      {
+        student.map((item,i)=> <h1 key={i}> {i+1}. Name : {item}</h1>)
+      }
     </div>
   )
 }
