@@ -1,13 +1,15 @@
-import Link from 'next/link'
+"use client"
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const Login = () => {
+  const router = useRouter()
   return (
     <div>
       Login Page 
       <br />
       <br />     
-      <Link href={"/"}>Home</Link>
+      <button onClick={()=> router.push("/")}>Home</button>
     </div>
   )
 }

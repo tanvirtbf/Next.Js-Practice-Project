@@ -1,13 +1,18 @@
-import Link from 'next/link'
+"use client"
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const About = () => {
+  const router = useRouter()
+  const navigate = (route)=>{
+    router.push(route)
+  }
   return (
     <div>
       About Page
       <br />
       <br />
-      <Link href={"/"}>Home</Link>
+      <button onClick={()=> navigate("/")}>Home</button>
     </div>
   )
 }
